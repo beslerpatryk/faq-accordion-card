@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem;
+	background-color: lightblue;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(0deg, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) 100%);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	padding: 0 2rem 2rem 2rem;
+}
+
+.card .illustration {
+	display: inline-block;
+	transform: translate(-13px, -55%);
+	max-width: 100%;
+}
+
+.card h1 {
+	text-align: center;
+}
+
+.card ul {
+	list-style: none;
+}
+
+.card li {
+	border-bottom: 1px solid blue;
+}
+
+.card li h2 {
+	font-size: 1rem;
+}
+
+.card li p {
+	display: none;
+}
+
+.unfold {
+	display: initial;
+}
+
+h2 {
+	display: inline-block;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
