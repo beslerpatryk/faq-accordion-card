@@ -1,3 +1,21 @@
+:root {
+	/* Text */
+	--very-desaturated-blue: hsl(238, 29%, 16%);
+	--soft-red: hsl(14, 88%, 65%);
+
+	/* Gradient */
+
+	--soft-violet: hsl(273, 75%, 66%);
+	--soft-blue: hsl(240, 73%, 65%);
+
+	/* Text */
+	--very-dark-grayish-blue: hsl(237, 12%, 33%);
+	--dark-grayish-blue: hsl(240, 6%, 50%);
+
+	/* Dividers */
+	--light-grayish-blue: hsl(240, 5%, 91%);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -13,8 +31,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 2rem;
-	background-color: lightblue;
+	font-family: "Kumbh Sans", sans-serif;
+	font-weight: 400;
 	background: rgb(0, 0, 0);
 	background: linear-gradient(0deg, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) 100%);
 }
@@ -22,31 +40,64 @@ body {
 .card {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
+	width: 325px;
+	min-height: 520px;
 	background-color: white;
-	padding: 0 2rem 2rem 2rem;
+	color: var(--very-desaturated-blue);
+	padding: 0 1.5rem 3.125rem 1.5rem;
+	border-radius: 25px;
+	position: relative;
 }
 
 .card .illustration {
+	position: absolute;
+	top: 0;
 	display: inline-block;
 	transform: translate(-13px, -55%);
 	max-width: 100%;
 }
 
+.pattern {
+	position: absolute;
+	top: 0;
+	transform: translate(13px, 0%);
+}
+
 .card h1 {
 	text-align: center;
+	font-weight: 700;
+	font-size: 2rem;
+	font-size: 400;
+	margin-bottom: 1rem;
 }
 
 .card ul {
 	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card li {
-	border-bottom: 1px solid blue;
+	display: block;
+	border-bottom: 1px solid var(--light-grayish-blue);
+	padding: 1rem 0;
+}
+
+.card li .question_wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.card li .question_wrapper img {
+	margin-left: auto;
 }
 
 .card li h2 {
-	font-size: 1rem;
+	display: inline-block;
+	font-size: 0.875rem;
+	font-weight: 400;
 }
 
 .card li p {
@@ -55,10 +106,6 @@ body {
 
 .unfold {
 	display: initial;
-}
-
-h2 {
-	display: inline-block;
 }
 
 .attribution {
