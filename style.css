@@ -48,6 +48,7 @@ body {
 	padding: 0 1.5rem 3.125rem 1.5rem;
 	border-radius: 25px;
 	position: relative;
+	transform: translateY(3.125rem);
 }
 
 .card .illustration {
@@ -80,18 +81,17 @@ body {
 }
 
 .card li {
-	display: block;
+	display: grid;
+	grid-template-columns: 1fr 0.08fr;
 	border-bottom: 1px solid var(--light-grayish-blue);
 	padding: 1rem 0;
+	transition: 0.5s ease-in;
 }
 
-.card li .question_wrapper {
-	display: flex;
-	align-items: center;
-}
-
-.card li .question_wrapper img {
-	margin-left: auto;
+.card li img {
+	align-self: center;
+	justify-self: center;
+	cursor: pointer;
 }
 
 .card li h2 {
@@ -102,6 +102,8 @@ body {
 
 .card li p {
 	display: none;
+	font-size: 0.75rem;
+	transition: 0.5s ease-in;
 }
 
 .unfold {
