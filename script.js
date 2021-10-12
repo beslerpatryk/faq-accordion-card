@@ -7,14 +7,24 @@ const ulEl = document.getElementsByTagName("ul");
 const card = document.getElementById("card");
 
 function toggleUnfold(buttons, questions, answers, questionWrapperEl) {
+	
 	questionWrapperEl.forEach((wrapper, idx) => {
 		wrapper.addEventListener("click", () => {
+			// closeUnfolded()
 			wrapper.classList.toggle("unfold");
 			buttons[idx].classList.toggle("unfold");
 			answers[idx].classList.toggle("unfold");
 			questions[idx].classList.toggle("unfold");
 		});
 	});
+}
+
+function closeUnfolded(){
+	let unfoldedEl = document.querySelectorAll(".unfold")
+
+	unfoldedEl.forEach(element => {
+		element.classList.toggle("unfold")
+	})
 }
 
 toggleUnfold(buttonList, questionList, answerList, questionWrapperEl);
